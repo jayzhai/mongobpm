@@ -1,7 +1,7 @@
-__author__ = 'ppmm'
+__author__ = 'Jay Zhai'
 
 import json
-from node import Node
+from workflow import Node
 
 def convert_to_builtin_type(obj):
     #print 'default(', repr(obj), ')' # 把MyObj对象转换成dict类型的对象
@@ -19,3 +19,5 @@ def from_json_to_node(_str):
     for (k,v) in _d.items():
         setattr(n, k, v)
     return n
+
+
