@@ -8,15 +8,17 @@ class Workflow:
         self.instanceid = instanceid
         self.name = name
         self.version = version
-        self.root_node = Node('_ROOTNODE')
-        self.node_dict = {'_ROOTNDE': self.root_node}
-        self.pointer = '_ROOTNODE'
+        self.root_node = ''
+        self.pointer = ''
+        self.node_dict = {}
 
     def find_node(self, name):
         return self.node_dict[name]
 
-    def add_node(self, node):
+    def add_node(self, node, root_node=False):
         self.node_dict[node.name] = node
+        if root_node:
+            self.root_node = node.name
 
     def delete_node(self, node_name):
         return self.node_dict.pop(node_name)
