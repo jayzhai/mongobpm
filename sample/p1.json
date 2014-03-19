@@ -1,5 +1,12 @@
-{
-    "name": "p1",
-    "age" : 12,
-    "checked": false
-}
+{"name": "test", "root_node": "n1", "instanceid": "0", "version": 0, "node_dict": {
+    "n1": {
+        "transit_dict": {
+            "DEFAULT": "n2"
+        },
+        "name": "n1"
+    },
+    "n2": {
+        "transit_dict": {},
+        "name": "n2"
+    }
+}, "pointer": ""}

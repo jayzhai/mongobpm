@@ -38,4 +38,4 @@ class Node:
 
 
     def transit(self,  target_node, transit_tag='DEFAULT'):
-        self.transit_dict[transit_tag] = target_node
+        self.transit_dict[transit_tag] = target_node.name
