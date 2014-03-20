@@ -23,7 +23,7 @@ class Workflow:
     def delete_node(self, node_name):
         return self.node_dict.pop(node_name)
 
-    def flow_to(self, node_name):
+    def jump_to(self, node_name):
         #TODO
         pass
 
@@ -39,3 +39,15 @@ class Node:
 
     def transit(self,  target_node, transit_tag='DEFAULT'):
         self.transit_dict[transit_tag] = target_node.name
+
+
+class Traveler:
+    'Like signal in other bpm system'
+
+    def __init__(self, id):
+        self.id = id
+        self.parent = ''
+        self.workflow_name = ''
+        self.workflow_version = 0
+        self.node = ''
+
