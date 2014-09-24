@@ -1,0 +1,39 @@
+considerations:
+1. multi-tanent
+2. user
+3. notification from outside
+
+
+approach : store everything in mongodb, mongobpm python code as a thin layer to operate the workflow
+
+
+*draw workflow graph
+
+modeler.newa() create a workflow
+modeler.addnode
+modeler.deletenode
+modeler.load(json)
+
+*save it to mongo, version++
+
+modeler.checkin
+
+*read a workflow from mongo, mark it exclusive
+
+modeler.checkout(name)
+
+*take a readonly version
+
+modeler.read(name, version)
+modeler.readlatest(name)
+
+
+
+modeler.next()
+modeler.next(path)
+modeler.query()
+
+
+
+
+

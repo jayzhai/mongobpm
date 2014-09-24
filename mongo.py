@@ -14,3 +14,6 @@ collection = db.test_collection
 
 post = {"author": "Mike", "text": "My first blog post!", "tags": ["mongodb", "python", "pymongo"], "date": datetime.datetime.utcnow()}
 
+collection.insert(post)
+
+print str(collection.find_one())
